@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Vertical Center</title>
+<style type="text/css">
+html, body {
+	font-family:Roboto, Arial, Helvetica, sans-serif ;
+	font-size: 12px;
+	padding:0px;
+	margin:0px;
+	width:100%;
+	height:100%;
+}
+* { box-sizing : border-box }
+
+/* Pour aligner verticalement, il faut que le conteneur de l'élément à centrer soit en position relative (ou absolute ou fixed)*/
+.v-align-content {
+	position:relative;
+	height:100px;
+}
+/* Pour le contenu aligné verticalement, il faut que l'élément à centrer ait les propriétés suivantes */
+.v-align {
+	position:absolute;
+	top:0px;
+	bottom:0px;
+	margin:auto; /* Cette propriété permet de centrer */
+}
+
+/* Pour le contenu aligné horizontalement, il faut que l'élément à centrer ait les propriétés suivantes */
+.h-align {
+	position:absolute;
+	left:0px;
+	right:0px;
+	margin:auto; /* Cette propriété permet de centrer */
+}
+
+/* Alignement vertical du texte avec la propriété line-height ***********************************/
+.center-text-30 {line-height:30px;text-align:center}
+.center-text-50 {line-height:50px;text-align:center;}
+.center-text-60 {line-height:60px;text-align:center;}
+.center-text-72 {line-height:72px;text-align:center;}
+</style>
+
+</head>
+
+<body>
+<br />
+
+<div class="v-align-content" style="background-color:#DBDBDB">
+    <div class="v-align center-text-30" style="width:30px;height:30px;background-color:#FAFAFA;left:10px;">30</div>
+    <div class="v-align center-text-50" style="width:50px;height:50px;background-color:#FAFAFA;left:50px;">50</div>
+    <div class="v-align center-text-60" style="width:60px;height:60px;background-color:#FAFAFA;left:120px;">60</div>
+    <div class="v-align center-text-72" style="width:72px;height:72px;background-color:#FAFAFA;left:190px;">72</div>
+</div>
+<br />
+
+<div class="v-align-content" style="background-color:#DBDBDB">
+    <div class="v-align" style="width:30px;height:30px;background-color:#FAFAFA;left:10px;"><img class="v-align h-align" src="mail-16-dark-grey.png" /></div>
+    <div class="v-align" style="width:50px;height:50px;background-color:#FAFAFA;left:50px;"><img class="v-align h-align" src="mail-24-dark-grey.png" /></div>
+    <div class="v-align" style="width:60px;height:60px;background-color:#FAFAFA;left:120px;"><img class="v-align h-align" src="mail-32-dark-grey.png" /></div>
+    <div class="v-align" style="width:72px;height:72px;background-color:#FAFAFA;left:190px;"><img class="v-align h-align" src="mail-48-dark-grey.png" /></div>
+</div>
+
+</body>
+</html>
